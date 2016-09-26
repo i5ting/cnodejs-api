@@ -21,3 +21,8 @@ $ npm i -S cnodejs
 require('cnodejs').create(title, content, [category])
 ```
 
+
+
+## Reffer
+
+- http://facebook.github.io/jest/docs/api.html#content

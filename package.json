@@ -27,6 +27,12 @@
   "dependencies": {
     "debug": "^2.2.0",
     "request": "^2.75.0",
+    "request-promise": "^4.1.1",
     "require-directory": "^2.1.1"
+  },
+  "devDependencies": {
+    "ava": "^0.16.0",
+    "co-exec": "^1.1.0",
+    "jest": "^15.1.1"
   }
 }

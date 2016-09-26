@@ -1,4 +1,4 @@
-var request = require('request')
+var request = require('request-promise')
 //
 // 接收 post 参数
 //
@@ -26,7 +26,7 @@ module.exports = function create(title, content, category) {
   console.log(process.env.CNODE_TOKEN)
   console.log(f)
   
-  request.post({
+  return request.post({
     url:'https://cnodejs.org/api/v1/topics', 
     form: f
   }, function(err,httpResponse,httpResponse){
