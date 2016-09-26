@@ -1,8 +1,8 @@
 {
   "name": "cnodejs",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "cnodejs.org api",
+  "main": "api/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,14 +10,23 @@
     "type": "git",
     "url": "git+https://github.com/i5ting/cnodejs-api.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "cnode",
+    "cnodejs",
+    "cnodejs.org",
+    "api",
+    "topic",
+    "markdown"
+  ],
+  "author": "i5ting",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/i5ting/cnodejs-api/issues"
   },
   "homepage": "https://github.com/i5ting/cnodejs-api#readme",
   "dependencies": {
-    "request": "^2.75.0"
+    "debug": "^2.2.0",
+    "request": "^2.75.0",
+    "require-directory": "^2.1.1"
   }
 }
