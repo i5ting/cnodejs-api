@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/i5ting/cnodejs-api/issues"
   },
-  "homepage": "https://github.com/i5ting/cnodejs-api#readme"
+  "homepage": "https://github.com/i5ting/cnodejs-api#readme",
+  "dependencies": {
+    "request": "^2.75.0"
+  }
 }
