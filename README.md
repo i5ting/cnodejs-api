@@ -8,7 +8,6 @@ client for https://cnodejs.org/api
 [![codecov.io](https://codecov.io/github/i5ting/cnodejs-api/coverage.svg?branch=master)](https://codecov.io/github/i5ting/cnodejs-api?branch=master)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 
-
 - [x] create topic
 - [ ] 支持把markdown发布到cnode
 
@@ -37,4 +36,4 @@ require('cnodejs').create(title, content, [category])
 
 ## Reffer
 
-- http://facebook.github.io/jest/docs/api.html#content
+- https://github.com/i5ting/ava-practice
