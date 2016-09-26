@@ -4,7 +4,9 @@
   "description": "cnodejs.org api",
   "main": "api/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/.bin/nyc ./node_modules/.bin/ava -v",
+     "report-coverage": "./node_modules/.bin/nyc report --reporter=lcov > coverage.lcov && codecov",
+     "standard": "./node_modules/.bin/standard index.js"
   },
   "repository": {
     "type": "git",
@@ -33,6 +35,14 @@
   "devDependencies": {
     "ava": "^0.16.0",
     "co-exec": "^1.1.0",
-    "jest": "^15.1.1"
+    "codecov": "^1.0.1",
+    "ghooks": "^1.2.4",
+    "nyc": "^7.0.0",
+    "standard": "^7.1.2"
+  },
+  "config": {
+    "ghooks": {
+      "pre-commit": "npm run standard"
+    }
   }
 }
