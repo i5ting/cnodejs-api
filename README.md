@@ -18,6 +18,13 @@ client for https://cnodejs.org/api
 $ npm i -S cnodejs
 ```
 
+
+需要在环境变量配置用户的cnode token
+
+```
+export CNODE_TOKEN=xxx
+```
+
 ## Usages
 
 ### create topic
