@@ -10,6 +10,7 @@ client for https://cnodejs.org/api
 
 - [x] create topic
 - [x] 支持cli把markdown发布到cnode
+- [ ] update topic
 
 ## Install
 
@@ -17,22 +18,35 @@ client for https://cnodejs.org/api
 $ npm i -g cnodejs
 ```
 
-
 需要在环境变量配置用户的cnode token
 
-```
-export CNODE_TOKEN=xxx
-```
 
 ## Usages
 
 ### cli
 
+快速发布README.md到cnode，只需要2步
+
+1） 需要在环境变量配置用户的cnode token
+  
 ```
+export CNODE_TOKEN=xxx
+```
+
+2） 执行cnode命令，默认文件是README.md
+
+```
+$ cnode -h
+Usage: cnode [options]
+
+Options:
+  --file, -f  choose a file, default README.md
+  -h, --help  Show help                                                [boolean]
 
 ```
 
-### for api
+### api
+
 ```
 $ npm i -S cnodejs
 ```
@@ -63,6 +77,7 @@ api.create('cnodejs api测试信息请忽略', '我是用来测试的,请忽略'
 ```
 $ DEBUG=cnode cnode
 ```
+
 ## Reffer
 
 - https://github.com/i5ting/ava-practice
