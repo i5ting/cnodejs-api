@@ -30,7 +30,7 @@ export CNODE_TOKEN=xxx
 var api = require('cnodejs')
 
 if (!process.env.CNODE_TOKEN) {
-  api = require('cnodejs')('3d5ba965-747e-45ab-b879-cae06136ea7e')
+  api = require('cnodejs')('3d5ba965-747e-45ab-b879')
 }
 ```
 
