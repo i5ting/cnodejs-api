@@ -9,7 +9,7 @@ client for https://cnodejs.org/api
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 
 - [x] create topic
-- [ ] 支持把markdown发布到cnode
+- [x] 支持cli把markdown发布到cnode
 
 ## Install
 
