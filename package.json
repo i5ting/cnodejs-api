@@ -8,6 +8,10 @@
      "report-coverage": "./node_modules/.bin/nyc report --reporter=lcov > coverage.lcov && codecov",
      "standard": "./node_modules/.bin/standard index.js"
   },
+  "preferGlobal": "true",
+  "bin": {
+    "cnode": "index.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/i5ting/cnodejs-api.git"

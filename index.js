@@ -2,7 +2,8 @@
 
 const debug = require('debug')('cnodejs')
 
-if (!process.env.CNODE_TOKEN) {
-  debug('请提供授权token，然后配置export.CNODE_TOKEN=xxxx')
-  console.log('请提供授权token，然后配置export.CNODE_TOKEN=xxxx')
-}
+// 获取第一个标题 title
+// 获取内容，即README.md  content
+// 默认为分享  tab
+
+debug('todo')

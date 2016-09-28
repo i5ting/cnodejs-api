@@ -26,10 +26,23 @@ export CNODE_TOKEN=xxx
 
 ## Usages
 
+```
+var api = require('cnodejs')
+
+if (!process.env.CNODE_TOKEN) {
+  api = require('cnodejs')('3d5ba965-747e-45ab-b879-cae06136ea7e')
+}
+```
+
 ### create topic
 
 ```
-require('cnodejs').create(title, content, [category])
+api.create('cnodejs api测试信息请忽略', '我是用来测试的,请忽略')
+  .then(function(response){
+    console.log(response)
+  }).catch(function (err) {
+    console.log(err)
+  })
 ```
 
 
