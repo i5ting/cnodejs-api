@@ -5,8 +5,8 @@
   "main": "api/index.js",
   "scripts": {
     "test": "./node_modules/.bin/nyc ./node_modules/.bin/ava -v",
-     "report-coverage": "./node_modules/.bin/nyc report --reporter=lcov > coverage.lcov && codecov",
-     "standard": "./node_modules/.bin/standard index.js"
+    "report-coverage": "./node_modules/.bin/nyc report --reporter=lcov > coverage.lcov && codecov",
+    "standard": "./node_modules/.bin/standard index.js"
   },
   "preferGlobal": "true",
   "bin": {
@@ -32,9 +32,11 @@
   "homepage": "https://github.com/i5ting/cnodejs-api#readme",
   "dependencies": {
     "debug": "^2.2.0",
+    "headings": "^1.0.1",
     "request": "^2.75.0",
     "request-promise": "^4.1.1",
-    "require-directory": "^2.1.1"
+    "require-directory": "^2.1.1",
+    "yargs": "^5.0.0"
   },
   "devDependencies": {
     "ava": "^0.16.0",

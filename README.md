@@ -14,7 +14,7 @@ client for https://cnodejs.org/api
 ## Install
 
 ```
-$ npm i -S cnodejs
+$ npm i -g cnodejs
 ```
 
 
@@ -25,6 +25,19 @@ export CNODE_TOKEN=xxx
 ```
 
 ## Usages
+
+### cli
+
+```
+
+```
+
+### for api
+```
+$ npm i -S cnodejs
+```
+
+then
 
 ```
 var api = require('cnodejs')
@@ -45,8 +58,11 @@ api.create('cnodejs api测试信息请忽略', '我是用来测试的,请忽略'
   })
 ```
 
+## Debug
 
-
+```
+$ DEBUG=cnode cnode
+```
 ## Reffer
 
 - https://github.com/i5ting/ava-practice
