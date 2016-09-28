@@ -47,6 +47,8 @@ function create (title, content) {
 
   api.create(title, content)
     .then(function (response) {
+      // 发布成功之后应该记下topic id = 57eb2ab8ea2fa420446d4366
+      // 以便日后更新之用
       debug(response)
     }).catch(function (err) {
       debug(err)
