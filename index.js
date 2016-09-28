@@ -2,6 +2,7 @@
 
 const fs = require('fs')
 const debug = require('debug')('cnode')
+const cache = require('./cache')
 
 const argv = require('yargs')
   .usage('Usage: $0 [options]')
@@ -30,8 +31,18 @@ const content = fs.readFileSync(file).toString()
 var headings = require('headings')(file)
 var title = headings[0]['text']
 
+if (argv.t || argv.title) {
+  title = argv.t ? argv.t : argv.title
+}
+
 debug(title)
 debug(content)
+
+var config = {
+  title: title,
+  file: file,
+  topic_id: ''
+}
 
 // create topic on cnodejs.org
 create(title, content)
@@ -50,6 +61,13 @@ function create (title, content) {
       // 发布成功之后应该记下topic id = 57eb2ab8ea2fa420446d4366
       // 以便日后更新之用
       debug(response)
+      console.log(response)
+      var o = JSON.parse(response)
+      config.topic_id = o['topic_id']
+
+      console.log(config)
+
+      cache.set(config)
     }).catch(function (err) {
       debug(err)
     })
