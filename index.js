@@ -3,7 +3,7 @@
 const fs = require('fs')
 const debug = require('debug')('cnode')
 
-var argv = require('yargs')
+const argv = require('yargs')
   .usage('Usage: $0 [options]')
   .option('file', {
     alias: 'f',
@@ -22,7 +22,7 @@ if (argv.f || argv.file) {
 
 debug(file)
 
-var content = fs.readFileSync(file).toString()
+const content = fs.readFileSync(file).toString()
 
 // 获取第一个标题 title
 // 获取内容，即README.md  content
