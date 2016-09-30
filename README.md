@@ -9,6 +9,7 @@ client for https://cnodejs.org/api
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 
 - [x] create topic
+- [x] update topic
 - [x] 支持cli把markdown发布到cnode
 - [ ] update topic
 
@@ -71,6 +72,26 @@ api.create('cnodejs api测试信息请忽略', '我是用来测试的,请忽略'
     console.log(err)
   })
 ```
+
+### update topic
+
+```
+var topic = {
+  topic_id: '57eb2ab8ea2fa420446d4366',
+  title: 'cnodejs api updated2',
+  content: 'cnodejs api updated',
+  tab: 'share'
+}
+
+api.update(topic)
+  .then(function(response){
+    console.log(response)
+  }).catch(function (err) {
+    console.log(err)
+  })
+```
+
+说明： `topic_id` 为必选项，目前api中其他参数不填即为空
 
 ## Debug
 
