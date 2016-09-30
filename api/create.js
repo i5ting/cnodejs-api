@@ -33,8 +33,8 @@ module.exports = function create(title, content, category) {
     form: f
   }, function(err,httpResponse,httpResponse){
      /* ... */ 
-    console.log(err)
-    console.log(httpResponse)
-    console.log(httpResponse)
+    debug(err)
+    debug(httpResponse)
+    debug(httpResponse)
   })
 }

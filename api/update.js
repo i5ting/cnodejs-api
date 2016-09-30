@@ -33,8 +33,8 @@ module.exports = function update(topic) {
     form: new_topic
   }, function(err,httpResponse,httpResponse){
      /* ... */ 
-    console.log(err)
-    console.log(httpResponse)
-    console.log(httpResponse)
+    debug(err)
+    debug(httpResponse)
+    debug(httpResponse)
   })
 }

@@ -58,7 +58,9 @@ if (cache.exist()) {
   }
 
   api.update(topic).then(function (response) {
-    console.log(response)
+    debug(response)
+    console.log('编辑帖子成功，地址如下')
+    console.log('    https://cnodejs.org/topic/' + topic.topic_id)
   }).catch(function (err) {
     console.log(err)
   })
@@ -71,22 +73,23 @@ if (cache.exist()) {
   }
 
   // create topic on cnodejs.org
-  create(title, content)
+  _create(title, content)
 }
 
-function create (title, content) {
+function _create (title, content) {
   api.create(title, content)
     .then(function (response) {
       // 发布成功之后应该记下topic id = 57eb2ab8ea2fa420446d4366
       // 以便日后更新之用
       debug(response)
-      console.log(response)
       var o = JSON.parse(response)
       config.topic_id = o['topic_id']
 
-      console.log(config)
+      debug(config)
 
       cache.set(config)
+      console.log('发帖成功')
+      console.log('    https://cnodejs.org/topic/' + config.topic_id)
     }).catch(function (err) {
       debug(err)
     })
