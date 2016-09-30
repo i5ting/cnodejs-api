@@ -18,9 +18,9 @@ var topic = require(process.cwd() + '/.cnode.json')
 
 console.log(topic)
 
-// api.update(topic)
-//   .then(function(response){
-//     console.log(response)
-//   }).catch(function (err) {
-//     console.log(err)
-//   })
+api.update(topic)
+  .then(function(response){
+    console.log(response)
+  }).catch(function (err) {
+    console.log(err)
+  })
