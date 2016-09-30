@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 const fs = require('fs')
-const debug = require('debug')('cnode')
+const debug = require('./api/debug')
 const cache = require('./cache')
 
 const argv = require('yargs')
@@ -41,6 +41,7 @@ debug(content)
 var config = {
   title: title,
   file: file,
+  tab: 'share',
   topic_id: ''
 }
 

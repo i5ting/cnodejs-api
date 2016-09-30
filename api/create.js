@@ -1,4 +1,5 @@
 var request = require('request-promise')
+var debug = require('./debug')
 //
 // 接收 post 参数
 //
@@ -16,6 +17,7 @@ module.exports = function create(title, content, category) {
   if (category) {
     _category = category;
   }
+  
   var f = {
     accesstoken: process.env.CNODE_TOKEN,
     title: title,
@@ -23,8 +25,8 @@ module.exports = function create(title, content, category) {
     tab: _category
   }
   
-  console.log(process.env.CNODE_TOKEN)
-  console.log(f)
+  debug(process.env.CNODE_TOKEN)
+  debug(f)
   
   return request.post({
     url:'https://cnodejs.org/api/v1/topics', 
