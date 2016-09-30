@@ -45,25 +45,7 @@ debug(title)
 debug(content)
 
 if (cache.exist()) {
-  var topic = cache.get()
-
-  debug(topic)
-
-  if (topic) {
-    topic['title'] = title
-  }
-
-  if (content) {
-    topic['content'] = content
-  }
-
-  api.update(topic).then(function (response) {
-    debug(response)
-    console.log('编辑帖子成功，地址如下')
-    console.log('    https://cnodejs.org/topic/' + topic.topic_id)
-  }).catch(function (err) {
-    console.log(err)
-  })
+  _update()
 } else {
   var config = {
     title: title,
@@ -93,4 +75,26 @@ function _create (title, content) {
     }).catch(function (err) {
       debug(err)
     })
+}
+
+function _update () {
+  var topic = cache.get()
+
+  debug(topic)
+
+  if (topic) {
+    topic['title'] = title
+  }
+
+  if (content) {
+    topic['content'] = content
+  }
+
+  api.update(topic).then(function (response) {
+    debug(response)
+    console.log('编辑帖子成功，地址如下')
+    console.log('    https://cnodejs.org/topic/' + topic.topic_id)
+  }).catch(function (err) {
+    console.log(err)
+  })
 }
