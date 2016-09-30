@@ -10,8 +10,7 @@ client for https://cnodejs.org/api
 
 - [x] create topic
 - [x] update topic
-- [x] 支持cli把markdown发布到cnode
-- [ ] update topic
+- [x] 支持cli把markdown发布到cnode（首次为创建，以后为修改）
 
 ## Install
 
@@ -20,7 +19,6 @@ $ npm i -g cnodejs
 ```
 
 需要在环境变量配置用户的cnode token
-
 
 ## Usages
 
