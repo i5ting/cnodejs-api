@@ -9,5 +9,8 @@ module.exports = {
   get: function () {
     var str = fs.readFileSync(cacheFile)
     return JSON.parse(str)
+  },
+  exist: function() {
+    return fs.existsSync(cacheFile)
   }
 }

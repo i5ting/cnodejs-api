@@ -3,6 +3,12 @@
 const fs = require('fs')
 const debug = require('./api/debug')
 const cache = require('./cache')
+var api = require('./api')
+
+if (!process.env.CNODE_TOKEN) {
+  debug('请提供授权token，然后配置export.CNODE_TOKEN=xxxx')
+  console.log('请提供授权token，然后配置export.CNODE_TOKEN=xxxx')
+}
 
 const argv = require('yargs')
   .usage('Usage: $0 [options]')
@@ -38,25 +44,37 @@ if (argv.t || argv.title) {
 debug(title)
 debug(content)
 
-var config = {
-  title: title,
-  file: file,
-  tab: 'share',
-  topic_id: ''
-}
+if (cache.exist()) {
+  var topic = cache.get()
 
-// create topic on cnodejs.org
-create(title, content)
+  debug(topic)
 
-function create (title, content) {
-  var api = require('./api')
-
-  if (!process.env.CNODE_TOKEN) {
-    debug('请提供授权token，然后配置export.CNODE_TOKEN=xxxx')
-    console.log('请提供授权token，然后配置export.CNODE_TOKEN=xxxx')
-    return
+  if (topic) {
+    topic['title'] = title
   }
 
+  if (content) {
+    topic['content'] = content
+  }
+
+  api.update(topic).then(function (response) {
+    console.log(response)
+  }).catch(function (err) {
+    console.log(err)
+  })
+} else {
+  var config = {
+    title: title,
+    file: file,
+    tab: 'share',
+    topic_id: ''
+  }
+
+  // create topic on cnodejs.org
+  create(title, content)
+}
+
+function create (title, content) {
   api.create(title, content)
     .then(function (response) {
       // 发布成功之后应该记下topic id = 57eb2ab8ea2fa420446d4366
