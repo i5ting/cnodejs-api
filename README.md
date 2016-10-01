@@ -1,4 +1,4 @@
-# cnodejs-api
+# cnode api && 快速发布README.md到cnode
 
 client for https://cnodejs.org/api
 
