@@ -16,6 +16,10 @@ const argv = require('yargs')
     alias: 'f',
     describe: 'choose a file, default README.md'
   })
+  .option('open', {
+    alias: 'o',
+    describe: 'open in browser'
+  })
   .help('h')
   .alias('h', 'help')
   .argv
@@ -71,7 +75,8 @@ function _create (title, content) {
 
       cache.set(config)
       console.log('发帖成功')
-      console.log('    https://cnodejs.org/topic/' + config.topic_id)
+
+      _open(config.topic_id)
     }).catch(function (err) {
       debug(err)
     })
@@ -93,8 +98,18 @@ function _update () {
   api.update(topic).then(function (response) {
     debug(response)
     console.log('编辑帖子成功，地址如下')
-    console.log('    https://cnodejs.org/topic/' + topic.topic_id)
+
+    _open(topic.topic_id)
   }).catch(function (err) {
     console.log(err)
   })
+}
+
+function _open (topicId) {
+  var url = 'https://cnodejs.org/topic/' + topicId
+  console.log('    ' + url)
+
+  if (argv.o || argv.open) {
+    require('open')(url)
+  }
 }

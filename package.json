@@ -33,6 +33,7 @@
   "dependencies": {
     "debug": "^2.2.0",
     "headings": "^1.0.1",
+    "open": "0.0.5",
     "request": "^2.75.0",
     "request-promise": "^4.1.1",
     "require-directory": "^2.1.1",
