@@ -35,13 +35,12 @@ export CNODE_TOKEN=xxx
 2） 执行cnode命令，默认文件是README.md
 
 ```
-$ cnode -h
 Usage: cnode [options]
 
 Options:
   --file, -f  choose a file, default README.md
+  --open, -o  open in browser
   -h, --help  Show help                                                [boolean]
-
 ```
 
 如果第一次发布成功，会生成.cnode.json文件作为缓存文件，以后再次执行cnode命令会更新。
