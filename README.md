@@ -95,8 +95,10 @@ api.update(topic)
 ## 针对于使用cnode建立的站点 
 
 ```
-export CNODE_URL=xxx
+$ export CNODE_URL=xxx
 ```
+
+其他同上
 
 ## Debug
 
