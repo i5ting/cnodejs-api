@@ -92,6 +92,12 @@ api.update(topic)
 
 说明： `topic_id` 为必选项，目前api中其他参数不填即为空
 
+## 针对于使用cnode建立的站点 
+
+```
+export CNODE_URL=xxx
+```
+
 ## Debug
 
 ```

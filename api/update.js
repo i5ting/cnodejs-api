@@ -29,7 +29,7 @@ module.exports = function update(topic) {
   debug(new_topic)
   
   return request.post({
-    url:'https://cnodejs.org/api/v1/topics/update', 
+    url: process.env.CNODE_URL + '/api/v1/topics/update', 
     form: new_topic
   }, function(err,httpResponse,httpResponse){
      /* ... */ 

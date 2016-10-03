@@ -10,6 +10,10 @@ if (!process.env.CNODE_TOKEN) {
   console.log('请提供授权token，然后配置export.CNODE_TOKEN=xxxx')
 }
 
+if (!process.env.CNODE_URL) {
+  process.env.CNODE_URL = 'https://cnodejs.org'
+}
+
 const argv = require('yargs')
   .usage('Usage: $0 [options]')
   .option('file', {
@@ -106,7 +110,7 @@ function _update () {
 }
 
 function _open (topicId) {
-  var url = 'https://cnodejs.org/topic/' + topicId
+  var url = process.env.CNODE_URL + '/topic/' + topicId
   console.log('    ' + url)
 
   if (argv.o || argv.open) {
