@@ -1,6 +1,6 @@
 {
   "name": "cnodejs",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "cnodejs.org api",
   "main": "api/index.js",
   "scripts": {
