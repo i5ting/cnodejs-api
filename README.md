@@ -1,5 +1,7 @@
 # cnode api && 快速发布README.md到cnode
 
+[![Join the chat at https://gitter.im/cnodejs-api/Lobby](https://badges.gitter.im/cnodejs-api/Lobby.svg)](https://gitter.im/cnodejs-api/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 client for https://cnodejs.org/api
 
 [![gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/cnodejs-api/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
